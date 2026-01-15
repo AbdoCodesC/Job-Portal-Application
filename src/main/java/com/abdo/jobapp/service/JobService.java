@@ -49,6 +49,10 @@ public class JobService {
         );
         repo.saveAll(jobs);
     }
+
+    public List<JobPost> search(String postDesc, String postProfile) {
+        return repo.findJobPostByPostProfileContainingOrPostDescContaining(postDesc, postProfile);
+    }
 }
 
 

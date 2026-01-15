@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDebounce } from 'use-debounce';
 import axios from 'axios';
 import Navbar from './Navbar';
 import {useNavigate} from "react-router-dom";
@@ -6,23 +7,36 @@ import {useNavigate} from "react-router-dom";
 function ViewAllJobs() {
   const [jobPosts, setJobPosts] = useState([]);
   const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedSearch] = useDebounce(searchTerm, 300);
+
+  function handleChange(event) {
+      event.preventDefault();
+      setSearchTerm(event.target.value);
+  }
 
   useEffect(() => {
-    axios
-      .get('http://localhost:7070/api/jobPosts')
-      .then((response) => {
-        setJobPosts(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching jobs:', error);
-      });
-  }, []);
+      let url = 'http://localhost:7070/api/jobPosts';
+      if (debouncedSearch) {
+          url += `/keyword/${debouncedSearch} `;
+      }
+
+      axios
+          .get(url)
+          .then((response) => {
+              setJobPosts(response.data);
+          })
+          .catch((error) => {
+              console.error('Error fetching jobs:', error);
+          });
+  }, [debouncedSearch]);
 
   return (
     <>
       <Navbar />
       <div className="container mt-5">
         <h2 className="mb-4 text-center font-weight-bold">Job Post List</h2>
+          <input placeholder="Search..." className="mb-4 search" name="search" type="text" id="search" onChange={handleChange}/>
         <div className="row row-cols-2">
           {jobPosts.map((jobPost) => (
             <div className="col mb-4" key={jobPost.id} onClick={() => navigate(`/viewjob`, {state: {jobPost: jobPost}})}>

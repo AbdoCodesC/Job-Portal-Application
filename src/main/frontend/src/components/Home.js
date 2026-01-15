@@ -9,20 +9,16 @@ function Home() {
         <div className="row">
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body text-center">
-                <a href="/viewalljobs" className="btn btn-primary">
+                <a href="/viewalljobs" className="btn btn-dark">
                   View All Jobs
                 </a>
-              </div>
             </div>
           </div>
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body text-center">
-                <a href="/addjob" className="btn btn-primary">
+                <a href="/addjob" className="btn btn-success">
                   Add Job
                 </a>
-              </div>
             </div>
           </div>
         </div>
