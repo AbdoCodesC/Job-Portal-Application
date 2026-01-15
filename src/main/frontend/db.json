@@ -1,0 +1,82 @@
+{
+  "jobPosts": [
+    {
+      "id": "1",
+      "postProfile": "Full Stack Developer",
+      "postDesc": "Looking for an experienced full stack developer to build modern web applications using React and Spring Boot",
+      "postTechStack": [
+        "Java",
+        "React",
+        "Spring Boot",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "reqExperience": 3
+    },
+    {
+      "id": "2",
+      "postProfile": "Frontend Developer",
+      "postDesc": "Join our team to create beautiful and responsive user interfaces with modern JavaScript frameworks",
+      "postTechStack": [
+        "React",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Redux"
+      ],
+      "reqExperience": 2
+    },
+    {
+      "id": "3",
+      "postProfile": "Backend Java Developer",
+      "postDesc": "Develop scalable backend services and RESTful APIs using Java and Spring ecosystem",
+      "postTechStack": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "Redis",
+        "Microservices"
+      ],
+      "reqExperience": 4
+    },
+    {
+      "id": "4",
+      "postProfile": "DevOps Engineer",
+      "postDesc": "Manage cloud infrastructure and CI/CD pipelines for enterprise applications",
+      "postTechStack": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Terraform"
+      ],
+      "reqExperience": 5
+    },
+    {
+      "id": "5",
+      "postProfile": "Machine Learning Engineer",
+      "postDesc": "Build and deploy machine learning models for business intelligence and automation",
+      "postTechStack": [
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "Machine Learning",
+        "AWS"
+      ],
+      "reqExperience": 3
+    },
+    {
+      "id": 6,
+      "postProfile": "Java Dev",
+      "postDesc": "i like",
+      "postTechStack": [
+        "Java",
+        "JavaScript",
+        "C++",
+        "Swift",
+        "TypeScript"
+      ],
+      "reqExperience": 2
+    }
+  ]
+}
