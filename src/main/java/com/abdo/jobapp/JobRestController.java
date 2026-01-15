@@ -41,4 +41,10 @@ public class JobRestController {
     public void deleteJob(@PathVariable int id) {
         jobService.deleteJob(id);
     }
+
+    @GetMapping("/load")
+    public String loadData() {
+        jobService.load();
+        return "Data loaded successfully";
+    }
 }
