@@ -1,15 +1,6 @@
-# 🔌 Spring Boot Backend Connection Guide
-
-## ✅ Configuration Complete!
-
-Your React app is now configured to connect to the Spring Boot backend instead of JSON Server.
-
 ## 🏗️ Backend Setup (Spring Boot)
 
-### Files Created/Modified:
-
 #### 1. **JobRestController.java** ✅ (NEW)
-Location: `src/main/java/com/abdo/jobapp/JobRestController.java`
 
 ```java
 @RestController
@@ -266,5 +257,3 @@ lsof -i:7070
 ---
 
 **Current Status:** ✅ React app connected to Spring Boot backend
-**No JSON Server needed** - All data handled by Spring Boot
-**Both JSP and React** frontends work simultaneously

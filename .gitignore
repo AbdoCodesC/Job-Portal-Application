@@ -56,3 +56,4 @@ yarn-error.log*
 *.log
 logs/
 
+SPRING_BOOT_CONNECTION.md
